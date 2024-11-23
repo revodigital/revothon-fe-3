@@ -6,8 +6,8 @@ import {slsTextractOcrDevGetDocumentByFileName} from "../../api-read-license/cli
 
 AWS.config.update({
 	credentials: {
-		accessKeyId: 'accessKeyId',
-		secretAccessKey: 'secretAccessKey',
+		accessKeyId: 'AKIASOF4WL5ZYOZA7JJY',
+		secretAccessKey: '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',
 	},
 })
 
@@ -86,7 +86,11 @@ const LicensePlateReader = () => {
 		if (test) {
 			const sn = test?.name.split('.')
 			const res = await getFileWithRetry(sn[0])
-			if (res) {/* Chiamata api */} else {/* Errore */}
+			if (res) {
+				console.log(res);
+			} else {
+
+			}
 		} else {}
 		setLoading(false)
 	}
